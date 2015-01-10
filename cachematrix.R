@@ -1,19 +1,21 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The two functions together find the inverse of a given matrix, assuming that the matrix is invertible. 
+## If the given matrix has an inverse recorded in the cache, the cacheSolve  
 
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
+	# create a matrix, containing the functions to set and get the value of the matrix;
+	# and also set and get the value of the inverse
         m <- NULL
 	set <- function(y) {
 		x <<- y
 		m <<- NULL
 	}
 	get <- function() x
-	setSolve <- function(solve) m <<- solve
-	getSolve <- function() m
+	setInverse <- function(inverse) m <<- inverse
+	getInverse <- function() m
 	list(set = set, get = get, 
-	     setSolve = setSolve, getSolve = getSolve)
+	     setInverse = setInverse, getInverse = getInverse)
 
 }
 
